@@ -1,0 +1,41 @@
+<!--
+  Generated template for the AcadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Acad</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1><b>List your highest level of education first</b></h1>
+    <h1>Academics Details</h1>
+
+    <ion-item>
+        <ion-label floating>Course/Degree</ion-label>
+        <ion-input type="text"[(ngModel)]="acadco"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>School/College/University Name</ion-label>
+        <ion-input type="text"[(ngModel)]="acadsc"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Marks</ion-label>
+        <ion-input type="text"[(ngModel)]="acadmar"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label floating>Year of Passing</ion-label>
+          <ion-input type="text"[(ngModel)]="acadyear"></ion-input>
+        </ion-item>
+ 
+        <button ion-button color="bcolor"(click)="move6()">Save</button>
+</ion-content>

@@ -1,14 +1,32 @@
+
+<ion-header> 
+  <ion-title>
+     <h1 style="text-align: center;font-style: oblique"><font color=" black">Create new Account</font></h1>
+  </ion-title >
+</ion-header>
 <ion-content class="ima">
-  <ion-card style="margin-top:100px">
-    <ion-card-content>
-      <ion-title >
-        <h1 style="text-align: center;font-style: oblique"><font color="white">Create Your Account</font></h1>
-        <ion-input style="margin-top:50px;color: white" type="text" placeholder="Your Name">Username</ion-input>
-        <ion-input style="margin-top:30px;color: white" type="text" placeholder="Password">Password</ion-input>
+  <div class="cls">
+     <!-- <ion-card style="margin-top:100px">
+    <ion-card-content> -->
+     
+        <!-- <ion-input style="margin-top:50px;color: white" type="text" placeholder="Your Name">Username</ion-input> -->
+        <ion-item>
+            <ion-label floating>Username</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          
+          <ion-item>
+              <ion-label floating>Password</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          
+          
+        <!-- <ion-input style="margin-top:30px;color: white" type="text" placeholder="Password">Password</ion-input> -->
         <div style="text-align: center;margin-top: 50px">
-           <button ion-button color="dark" outline (click)="jumpToMain()"><font color="white">Sign In</font></button>
+           <button ion-button color="dark" outline (click)="jumpToMain()"><font color="black">Sign In</font></button>
          </div>
-      </ion-title>
-    </ion-card-content>
-  </ion-card>
+         </div>
+     
+    <!-- </ion-card-content>
+  </ion-card> -->
  </ion-content>

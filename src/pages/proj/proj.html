@@ -1,0 +1,47 @@
+<!--
+  Generated template for the ProjPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>proj</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <h1>Project Details</h1>
+
+    <ion-item>
+        <ion-label floating>Project Title</ion-label>
+        <ion-input type="text"[(ngModel)]="projdet"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Description</ion-label>
+        <ion-input type="text"[(ngModel)]="projdes"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Duration/Time</ion-label>
+        <ion-input type="text"[(ngModel)]="projdur"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label floating>Role</ion-label>
+          <ion-input type="text"[(ngModel)]="projrole"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Team Size</ion-label>
+            <ion-input type="text"[(ngModel)]="projteam"></ion-input>
+          </ion-item>
+        
+          <button ion-button color="bcolor"(click)="move8()" >Add</button>
+        <!-- <button ion-button >Save</button> -->
+</ion-content>

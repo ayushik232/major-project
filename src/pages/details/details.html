@@ -7,32 +7,46 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>details</ion-title>
+    <ion-title>Details</ion-title>
   </ion-navbar>
 
 <ion-toolbar no-border-top>
-<!--<ion-content padding>
-    <div padding>-->
+  
+
         <ion-segment [(ngModel)]="aa">
+            
+
             <ion-segment-button value="Career Objective">
                 Career Objective
               </ion-segment-button>
+             
              <ion-segment-button value="Personal Details">
             Personal Details
               </ion-segment-button>
+             
           <ion-segment-button value="academics">
             Academics
           </ion-segment-button>
+       
+          <ion-segment-button value="profile picture">
+              Profile Picture
+            </ion-segment-button>
+            
           <ion-segment-button value="Work Experience">
               Work Experience
             </ion-segment-button>
+        
             <ion-segment-button value="Projects">
                 Projects
               </ion-segment-button>
+            
+            
               <ion-segment-button value="Skills">
                   Skills
                 </ion-segment-button>
+              
         </ion-segment>
+        
     </ion-toolbar>
 </ion-header>
 
@@ -41,45 +55,75 @@
       <ion-list *ngSwitchCase="'Personal Details'">
           <ion-item>
               <ion-label floating>Name</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text"[(ngModel)]="pername"></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label floating>Address</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input type="text"[(ngModel)]="peraddr"></ion-input>
               </ion-item>
 
               <ion-item>
                   <ion-label floating>Email-id</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input type="text"[(ngModel)]="permail"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label floating>Mobile</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text"[(ngModel)]="permob"></ion-input>
                   </ion-item>
-
-                  <button ion-button >Save</button>
+                  <button ion-button color="bcolor"(click)="move()">Save</button>
           </ion-list>
 
           <ion-list *ngSwitchCase="'Career Objective'">
               <ion-item>
                   <ion-label floating>Objective</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input type="text"[(ngModel)]="carrobj"></ion-input>
                 </ion-item>
-                <button ion-button >Save</button>
+                <button ion-button color="bcolor"(click)="move1()" >Save</button>
           </ion-list>
 
           <ion-list *ngSwitchCase="'academics'">
     <ion-fab right bottom>
-      <!-- hello -->
-      <button ion-fab color="danger"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab color="danger" (click)=" goToAcad()"><ion-icon name="add"></ion-icon></button>
     </ion-fab>
+    <button ion-button color="bcolor"(click)="move3()">Save</button>
     </ion-list>
+
+    <ion-list *ngSwitchCase="'Work Experience'">
+      <ion-fab right bottom>
+        <button ion-fab color="danger" (click)=" goToWorkExp()"><ion-icon name="add"></ion-icon></button>
+      </ion-fab>
+      <button ion-button color="bcolor"(click)="move4()">Save</button>
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'Projects'">
+        <ion-fab right bottom>
+          <button ion-fab color="danger" (click)=" goToProj()"><ion-icon name="add"></ion-icon></button>
+        </ion-fab>
+        <button ion-button color="bcolor"(click)="move5()">Save</button>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'Skills'">
+          <ion-fab right bottom>
+            <button ion-fab color="danger" (click)=" goToSkill()"><ion-icon name="add"></ion-icon></button>
+          </ion-fab>
+          <div class='xyz'>
+            <button ion-button color="bcolor"(click)="goTofinalpage()" >Generate pdf</button>
+            </div>
+          </ion-list>
+          <ion-list *ngSwitchCase="'profile picture'">
+              <ion-item>
+                  <span class="profile-picture__icon">
+                      <ion-icon name="ios-camera" md="md-camera" (click)="goTocamera()"></ion-icon>
+                    </span>
+                  
+                </ion-item>
+                <button ion-button color="bcolor"(click)="move2()" >Save</button>
+          </ion-list>
+
 </div>
          
-    <div class='xyz'>
-        <button ion-button (click)="goTofinalpage()" >Generate pdf</button>
-        </div>
+    
  
 </ion-content>

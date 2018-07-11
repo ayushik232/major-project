@@ -13,7 +13,16 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { DetailsPage } from '../pages/details/details';
 import { FinalPage } from '../pages/final/final';
-
+import { WorkExpPage } from '../pages/work-exp/work-exp';
+import { AcadPage } from '../pages/acad/acad';
+import { ProjPage } from '../pages/proj/proj';
+import { SkillPage } from '../pages/skill/skill';
+import { CommonProvider } from '../providers/common/common';
+import { CameraPage } from '../pages/camera/camera';
+import { FormsModule } from '@angular/forms';
+import { Camera,CameraOptions, CameraPopoverOptions } from '@ionic-native/camera';
+import {HttpClientModule } from '@angular/common/http';
+import { HttpModule} from '@angular/http';
 
 
 @NgModule({
@@ -21,10 +30,18 @@ import { FinalPage } from '../pages/final/final';
     MyApp,
     HomePage,ContactPage,YourDesignsPage,SharePage,RatingsPage,LoginPage,SignupPage,
     DetailsPage,
-    FinalPage
+    FinalPage,
+    WorkExpPage,
+    AcadPage,
+    ProjPage,
+    SkillPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -32,12 +49,19 @@ import { FinalPage } from '../pages/final/final';
     MyApp,
     HomePage, HomePage,ContactPage,YourDesignsPage,SharePage,RatingsPage,LoginPage,SignupPage,
     DetailsPage,
-    FinalPage
+    FinalPage,
+    WorkExpPage,
+    AcadPage,
+    ProjPage,
+    SkillPage,
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    Camera,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CommonProvider
   ]
 })
 export class AppModule {}
