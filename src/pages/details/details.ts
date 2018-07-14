@@ -30,7 +30,13 @@ export class DetailsPage {
 
   goTofinalpage(){
  
-let personDetail={objective:this.cprovider.getObjective(),name:this.cprovider.getObjective1()}
+let personDetail={objective:this.cprovider.getObjective(),name:this.cprovider.getObjective1(),address:this.cprovider.getObjective2(),
+  Email:this.cprovider.getObjective3(),mobile:this.cprovider.getObjective4(),course:this.cprovider.getObjective5(),
+  sc:this.cprovider.getObjective6(),marks:this.cprovider.getObjective7(),year:this.cprovider.getObjective8(),
+  org:this.cprovider.getObjective9(),des:this.cprovider.getObjective10(),dur:this.cprovider.getObjective11(),
+  role:this.cprovider.getObjective12(),details:this.cprovider.getObjective13(),description:this.cprovider.getObjective14()
+  ,duration:this.cprovider.getObjective15(),role1:this.cprovider.getObjective16(),team:this.cprovider.getObjective17(),
+  hobby:this.cprovider.getObjective18()}
     this.navCtrl.push(FinalPage,personDetail);
  
   }
